@@ -22,7 +22,7 @@
   <arg name="use_sim_time" default="false" description="use_sim_time"/>
   <!-- Vehicle -->
   <arg name="vehicle_id" default="$(env VEHICLE_ID default)" description="vehicle specific ID"/>
-  <arg name="launch_vehicle_interface" default="true" description="launch vehicle interface"/>
+  <arg name="launch_vehicle_interface" default="false" description="launch vehicle interface"/>
   <!-- Map -->
   <arg name="lanelet2_map_file" default="lanelet2_map.osm" description="lanelet2 map file name"/>
   <arg name="pointcloud_map_file" default="pointcloud_map.pcd" description="pointcloud map file name"/>
@@ -77,6 +77,8 @@
   <!-- Sensing -->
   <group if="$(var launch_sensing)">
     <include file="$(find-pkg-share tier4_sensing_launch)/launch/sensing.launch.xml"/>
+    <!-- <arg name="launch_driver" value="false"/>
+    </include> -->
   </group>
 
   <!-- Localization -->
