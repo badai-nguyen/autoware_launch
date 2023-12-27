@@ -32,8 +32,8 @@
           moving_time_threshold: 1.0                   # [s]
           max_expand_ratio: 0.0                        # [-]
           envelope_buffer_margin: 0.3                  # [m]
-          avoid_margin_lateral: 1.0                    # [m]
-          safety_buffer_lateral: 0.7                   # [m]
+          avoid_margin_lateral: 0.0                    # [m]
+          safety_buffer_lateral: 0.8                   # [m]
           safety_buffer_longitudinal: 0.0              # [m]
           use_conservative_buffer_longitudinal: true   # [-] When set to true, the base_link2front is added to the longitudinal buffer before avoidance.
         truck:
@@ -42,8 +42,8 @@
           moving_time_threshold: 1.0
           max_expand_ratio: 0.0
           envelope_buffer_margin: 0.3
-          avoid_margin_lateral: 1.0
-          safety_buffer_lateral: 0.7
+          avoid_margin_lateral: 0.0
+          safety_buffer_lateral: 0.8
           safety_buffer_longitudinal: 0.0
           use_conservative_buffer_longitudinal: true
         bus:
@@ -52,8 +52,8 @@
           moving_time_threshold: 1.0
           max_expand_ratio: 0.0
           envelope_buffer_margin: 0.3
-          avoid_margin_lateral: 1.0
-          safety_buffer_lateral: 0.7
+          avoid_margin_lateral: 0.0
+          safety_buffer_lateral: 0.8
           safety_buffer_longitudinal: 0.0
           use_conservative_buffer_longitudinal: true
         trailer:
@@ -62,8 +62,8 @@
           moving_time_threshold: 1.0
           max_expand_ratio: 0.0
           envelope_buffer_margin: 0.3
-          avoid_margin_lateral: 1.0
-          safety_buffer_lateral: 0.7
+          avoid_margin_lateral: 0.0
+          safety_buffer_lateral: 0.8
           safety_buffer_longitudinal: 0.0
           use_conservative_buffer_longitudinal: true
         unknown:
@@ -82,7 +82,7 @@
           moving_time_threshold: 1.0
           max_expand_ratio: 0.0
           envelope_buffer_margin: 0.8
-          avoid_margin_lateral: 1.0
+          avoid_margin_lateral: 0.0
           safety_buffer_lateral: 1.0
           safety_buffer_longitudinal: 1.0
           use_conservative_buffer_longitudinal: true
@@ -92,7 +92,7 @@
           moving_time_threshold: 1.0
           max_expand_ratio: 0.0
           envelope_buffer_margin: 0.8
-          avoid_margin_lateral: 1.0
+          avoid_margin_lateral: 0.0
           safety_buffer_lateral: 1.0
           safety_buffer_longitudinal: 1.0
           use_conservative_buffer_longitudinal: true
@@ -102,7 +102,7 @@
           moving_time_threshold: 1.0
           max_expand_ratio: 0.0
           envelope_buffer_margin: 0.8
-          avoid_margin_lateral: 1.0
+          avoid_margin_lateral: 0.0
           safety_buffer_lateral: 1.0
           safety_buffer_longitudinal: 1.0
           use_conservative_buffer_longitudinal: true
@@ -199,8 +199,8 @@
           lateral_execution_threshold: 0.09             # [m]
           lateral_small_shift_threshold: 0.101          # [m]
           lateral_avoid_check_threshold: 0.1            # [m]
-          soft_road_shoulder_margin: 0.3                # [m]
-          hard_road_shoulder_margin: 0.3                # [m]
+          soft_road_shoulder_margin: 0.8                # [m]
+          hard_road_shoulder_margin: 0.8                # [m]
           max_right_shift_length: 5.0
           max_left_shift_length: 5.0
           max_deviation_from_lane: 0.5                  # [m]
