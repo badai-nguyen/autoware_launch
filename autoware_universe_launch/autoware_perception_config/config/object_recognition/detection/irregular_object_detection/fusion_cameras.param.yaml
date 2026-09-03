@@ -1,14 +1,21 @@
 # Platform camera set for the irregular-object ROI-pointcloud fusion.
 # Overrides the per-camera arrays of fusion_common.param.yaml with the subset
 # of cameras used for fusion; array order defines the rois indices.
+# X2 gen2 uses camera3, camera4 and camera5 for the irregular object pipeline.
 /**:
   ros__parameters:
-    rois_number: 1
-    rois_timestamp_offsets: [0.098]
+    rois_number: 3
+    rois_timestamp_offsets: [0.040, 0.040, 0.040]
     matching_strategy:
-      rois_timestamp_noise_window: [0.01]
-    approximate_camera_projection: [true]
-    point_project_to_unrectified_image: [false]
-    input/rois0: /perception/object_recognition/detection/rois0
-    input/camera_info0: /sensing/camera/camera0/camera_info
-    input/image0: /sensing/camera/camera0/image_raw
+      rois_timestamp_noise_window: [0.01, 0.01, 0.01]
+    approximate_camera_projection: [true, true, true]
+    point_project_to_unrectified_image: [true, true, true]
+    input/rois0: /perception/object_recognition/detection/rois3
+    input/camera_info0: /sensing/camera/camera3/camera_info
+    input/image0: /sensing/camera/camera3/image_raw
+    input/rois1: /perception/object_recognition/detection/rois4
+    input/camera_info1: /sensing/camera/camera4/camera_info
+    input/image1: /sensing/camera/camera4/image_raw
+    input/rois2: /perception/object_recognition/detection/rois5
+    input/camera_info2: /sensing/camera/camera5/camera_info
+    input/image2: /sensing/camera/camera5/image_raw
